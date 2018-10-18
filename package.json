@@ -2,8 +2,10 @@
   "name": "repos-test-lib",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
+    "prebuild": "rm -rf dist/",
+    "build": "babel src/ -d dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -15,5 +17,11 @@
   "bugs": {
     "url": "https://github.com/ximpledev/repos-test-lib/issues"
   },
-  "homepage": "https://github.com/ximpledev/repos-test-lib#readme"
+  "homepage": "https://github.com/ximpledev/repos-test-lib#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-preset-env": "^1.7.0"
+  },
+  "dependencies": {}
 }
